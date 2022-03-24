@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import useFetch from './useFetch';
 import Loading from './common/Loading';
-import MapInfo from './MapInfo';
 
 function Maps() {
   const navigate = useNavigate();
@@ -15,7 +14,7 @@ function Maps() {
     <div className='maps'>
       {maps.filter(f => f.displayName !== 'The Range').map(m => 
         <div key={m.uuid} className="map_item" onClick={() => navigate(`/map-info/${m.displayName}`, { state: { map: m }})}>
-          <img className='map_img' src={m.splash} />
+          <img className='map_img' src={m.splash} alt="map_displayIcon" />
           <div className="title_container">
             <h1 className='map_title'>{m.displayName}</h1>
           </div>

@@ -1,5 +1,5 @@
-import React, { Component, useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/index.css'
 // Templates
 import HomePage from './components/templates/HomePage';

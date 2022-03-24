@@ -19,15 +19,15 @@ function Agent() {
   return (
     <div className='single_agent_info'>
         <div className='single_agent_header'>
-            <img className='single_agent_background' src={agent.data.background} alt="" />
-            <img className='single_agent_img' src={agent.data.fullPortrait} />
+            <img className='single_agent_background' src={agent.data.background} alt="agent_bg" />
+            <img className='single_agent_img' src={agent.data.fullPortrait} alt="agent_img"/>
         </div>
 
         <div className="single_agent_body">
           <div className="agent_header">
             <div className="single_agent_role">
               <div className="role_type">
-                <img className='img_red' src={agent.data.role.displayIcon} />
+                <img className='img_red' src={agent.data.role.displayIcon} alt="agent_role"/>
               <h3 className='role_name'>{agent.data.role.displayName.toUpperCase()}</h3>
               </div>
               <div className="description">
@@ -46,7 +46,7 @@ function Agent() {
                 <div className="ability item" key={ability.displayName}>
                     <h3><HiChevronDoubleRight/>{ability.slot.toUpperCase()}</h3>
                     <div className="ability_type">
-                      <img className='img_red' src={ability.displayIcon}/>
+                      <img className='img_red' src={ability.displayIcon} alt="agent_icon"/>
                           <span>{ability.displayName.toUpperCase()}</span>
                     </div>
                     { video.ability.filter(va => va.abilityName === ability.slot).map(vaEmbed => 
@@ -67,19 +67,3 @@ function Agent() {
 }
 
 export default Agent
-
-
-
-
-
-// <div className="ability item" key={ability.displayName}>
-//     <h3><HiChevronDoubleRight/> {ability.slot.toUpperCase()}</h3>
-//     <div className="ability_type">
-//       <img className='img_red' src={ability.displayIcon}/>
-//           <span>{ability.displayName.toUpperCase()}</span>
-//     </div>
-//     <div className="description">
-//       <p>{ability.description}</p>
-//       <YoutubeEmbed embedId="" />
-//     </div>
-// </div>    

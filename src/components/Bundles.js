@@ -7,6 +7,8 @@ export default function Bundles() {
   const { data, loading, error } = useFetch('https://valorant-api.com/v1/bundles')
   const [show, setShow] = useState(false);
   const [modalImg, setModalImg] = useState('');
+  if (loading) return <Loading/>
+  if (error) console.log(error)
   
   const bundles = data?.data;
   const handleClose = () => setShow(false);
@@ -26,13 +28,13 @@ export default function Bundles() {
       centered
     >
         <span>close</span>
-        <img className='bundle-img' src={modalImg} />
+        <img className='bundle-img' src={modalImg} alt="bundle_img"/>
     </Modal>
     <div className='bundles'>
       {bundles?.filter(i => i.verticalPromoImage !== null).map(b =>
         <div key={b.uuid} className="bundle_card" onClick={(e) => handleShow(e, b.displayIcon)}>
           <h5 className='bundle_title'>{b.displayName}</h5>
-          <img className='bundle_img' src={b.verticalPromoImage}/>
+          <img className='bundle_img' src={b.verticalPromoImage} alt="bundle_icon" />
         </div>
       )}
     </div>

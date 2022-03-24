@@ -14,8 +14,7 @@ export default function Melee() {
             </div>
 
             <div className="w_info">
-                {/* <img className='buddy' src={selectedBuddyImg}/> */}
-                <img className='w_skin_img' src={img} />
+                <img className='w_skin_img' src={img} alt="melee_skin" />
             </div>
 
             <div className="w_skins">
@@ -24,7 +23,7 @@ export default function Melee() {
                 {weapon.skins.map(s =>
                     <li key={s.uuid} onClick={() => setSelectedMelee(s)} > 
                         <div className={selectedMelee.displayName === s.displayName ? 'img_container active_skin' : 'img_container'} onClick={() => console.log(s.displayName)}>
-                        <img className='w_img melee_skins' src={s.chromas[0].fullRender} />  
+                        <img className='w_img melee_skins' src={s.chromas[0].fullRender} alt="melee_skin_img" />  
                         </div>
                     </li>  
                 )}

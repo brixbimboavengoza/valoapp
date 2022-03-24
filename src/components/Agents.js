@@ -2,10 +2,9 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import useFetch from './useFetch'
 import Loading from './common/Loading';
-import Agent from './Agent';
 
 export default () => {
-    const navigate = useNavigate();
+    let navigate = useNavigate();
     const { data: agents, loading, error } = useFetch('https://valorant-api.com/v1/agents')
     if (loading) return <Loading/>
     if (error) console.log(error)

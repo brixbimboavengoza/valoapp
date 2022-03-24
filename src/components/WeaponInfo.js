@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate, useLocation, Navigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Buddies from './Buddies';
 import WeaponStats from './subpages/WeaponStats';
 
@@ -25,8 +25,6 @@ export default function WeaponInfo() {
     setActiveSkin(displayName)
   }
 
-  const classes = 'img_container ';
-
   return (
     <div className='w_info_container'>
       <div className="w_main">
@@ -35,7 +33,7 @@ export default function WeaponInfo() {
 
       <div className="w_info">
         <img className='buddy' src={selectedBuddyImg} />
-        <img className='w_skin_img' src={img}/>
+        <img className='w_skin_img' src={img} alt="skin_icon" />
       </div>
 
       <div className="w_skins">
@@ -43,8 +41,8 @@ export default function WeaponInfo() {
         <ul className='w_skin_slider scrollbar'>
           {w.state.weapon.skins.map(s =>
             <li key={s.uuid} onClick={() => handleSelected(s, s.displayName)} > 
-                <div className={activeSkin === s.displayName ? 'img_container active_skin' : 'img_container'} onClick={() => console.log(s.displayName)}>
-                  <img className='w_img' src={s.chromas[0].fullRender} />  
+                <div className={activeSkin === s.displayName ? 'img_container active_skin' : 'img_container'}>
+                  <img className='w_img' src={s.chromas[0].fullRender} alt="skin_fullrender"/>  
                 </div>
             </li>  
           )}

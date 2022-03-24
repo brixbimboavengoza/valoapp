@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import useFetch from './useFetch';
 import Loading from './common/Loading';
-import Melee from './subpages/Melee';
 
 function Weapons() {
   const navigate = useNavigate();
@@ -18,7 +17,7 @@ function Weapons() {
         <div className='weapon_lists_container' key={weapon.uuid} 
           onClick={() => navigate(`/weapon-info/${weapon.displayName.toLowerCase()}`, { state: { weapon: weapon }})}>
           <div className="weapon_img_container">
-            <img className='weapon_img' src={weapon.displayIcon}/>
+            <img className='weapon_img' src={weapon.displayIcon} alt="wep_img" />
           </div>
           <div className="weapon_name_container">
             <h3 className='weapon_name'>{weapon.displayName}</h3>  
@@ -27,7 +26,7 @@ function Weapons() {
       )}
         <div className='weapon_lists_container' onClick={() => navigate('/weapon-info/melee/', { state: { weapon: melee }})}>
           <div className="weapon_img_container">
-            <img className='weapon_img' src={melee[0].displayIcon}/>
+            <img className='weapon_img' src={melee[0].displayIcon} alt="wep_icon"/>
           </div>
           <div className="weapon_name_container">
             <h3 className='weapon_name'>Melee</h3>  
