@@ -38,7 +38,7 @@ export default function MapInfo() {
                     <div className="map_container">
                         <span>{mapData.description}</span>
                         <div className="map_images">
-                            <img onClick={() => handleShow(process.env.PUBLIC_URL + mapData.imgUrl)} className='map_img' src={process.env.PUBLIC_URL + mapData.imgUrl} alt="map_img"/>
+                            <img onClick={() => handleShow(mapData.imgUrl)} className='map_img' src={mapData.imgUrl} alt="map_img"/>
                             <img onClick={() => handleShow(map.splash)} className='map_img' src={map.splash}  alt="map_splash"/>
                         </div>
                     </div>
