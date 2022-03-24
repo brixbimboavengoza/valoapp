@@ -1,0 +1,924 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@font-face {
+  font-family: valorant;
+  src: url(../assets/Valorant\ Font.ttf); }
+@font-face {
+  font-family: secondary;
+  src: url(../assets/Tungsten-Bold.ttf); }
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  box-sizing: border-box;
+  font-family: valorant;
+  height: 100vh;
+  background-color: #0f1823; }
+
+.body {
+  padding-bottom: 5%; }
+
+a {
+  text-decoration: none;
+  border: none;
+  color: #9ca2ab;
+  font-size: 1rem;
+  font-weight: bold; }
+  a:hover {
+    color: #d5202f; }
+
+li {
+  list-style-type: none;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  font-family: secondary;
+  letter-spacing: 1px; }
+
+.active {
+  height: 1.5rem;
+  padding-bottom: 2px;
+  position: relative;
+  color: #d5202f; }
+  .active::after {
+    content: "";
+    height: 0.16rem;
+    background-color: #d5202f;
+    position: absolute;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15%; }
+
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  background-color: #0f1823; }
+
+html::-webkit-scrollbar {
+  width: 12px;
+  background-color: #0f1823; }
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #d5202f; }
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 95vw; }
+  .loading .bounce2 {
+    width: 150px;
+    height: 150px;
+    animation: bounce2 1s ease infinite; }
+@keyframes bounce2 {
+  0%,
+		20%,
+		50%,
+		80%,
+		100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-30px); }
+  60% {
+    transform: translateY(-15px); } }
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
+.img_red {
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(5); }
+
+.scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  background-color: #0f1823; }
+
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  background-color: #0f1823; }
+
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #d5202f;
+  width: 13rem; }
+
+.active_skin {
+  background: red !important; }
+
+@media only screen and (min-width: 800px) {
+  .modal-open .fade.modal.modal.show .modal-dialog {
+    width: 63% !important; }
+
+  .header {
+    margin: 2% 19% !important; }
+    .header .navbar {
+      justify-content: space-evenly !important; }
+
+  .body {
+    margin: 0 5% !important; }
+
+  .container .body .agent_lists {
+    grid-template-columns: 1fr 1fr !important; }
+
+  .single_agent_header {
+    border-radius: 0 !important;
+    margin-bottom: 5rem; }
+    .single_agent_header .single_agent_background {
+      width: 34rem !important;
+      height: 31rem !important; }
+    .single_agent_header .single_agent_img {
+      max-height: 136% !important; }
+
+  .single_agent_body .single_agent_role {
+    width: 60% !important;
+    align-self: center !important; }
+  .single_agent_body .agent_header {
+    display: flex;
+    margin: 2%; }
+  .single_agent_body .agent_description {
+    width: 60%;
+    align-self: center;
+    font-size: 200%; }
+  .single_agent_body .abilities {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+    grid-gap: 20px; }
+  .single_agent_body .item {
+    border: 4px solid #0f1823; }
+    .single_agent_body .item .description {
+      display: flex;
+      display: block !important; }
+    .single_agent_body .item p {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      text-align: center;
+      font-size: 20px;
+      margin: 2% 0; }
+
+  .container {
+    align-items: center;
+    justify-content: center;
+    width: 100% !important; }
+
+  .w_info_container {
+    display: flex;
+    flex-direction: column; }
+    .w_info_container .w_main,
+    .w_info_container .w_info,
+    .w_info_container .w_skins,
+    .w_info_container .w_description,
+    .w_info_container .w_buddies {
+      width: 70% !important;
+      align-self: center; }
+    .w_info_container .w_info {
+      width: max-content !important; }
+      .w_info_container .w_info img.buddy {
+        width: 60px !important;
+        margin-top: -13px !important;
+        margin-left: 11px !important; }
+      .w_info_container .w_info .w_skin_img {
+        width: 41rem !important; }
+
+  .melee_container .w_skin_img {
+    max-width: 700px !important; }
+  .melee_container .w_skins {
+    width: 100% !important; }
+
+  .weapon_lists {
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-gap: 20px 18px !important; }
+
+  .maps {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+
+  .map_info .map_images {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px; }
+    .map_info .map_images img {
+      width: 100% !important; }
+
+  .bundles {
+    grid-template-columns: repeat(4, 1fr) !important; } }
+@media only screen and (min-width: 1200px) {
+  .modal-open .fade.modal.modal.show .modal-dialog {
+    width: 47% !important; }
+
+  .header {
+    margin: 2% 29% !important; }
+
+  .container .body {
+    margin: 3% 5% !important; }
+    .container .body .agent_lists {
+      grid-template-columns: repeat(3, 1fr) !important; }
+  .container .agent_header {
+    max-width: 70%;
+    align-self: center; }
+
+  .weapon_lists {
+    grid-template-columns: repeat(5, 1fr) !important;
+    grid-gap: 20px 18px !important; }
+
+  .w_info_container .w_description {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-gap: 20px; }
+    .w_info_container .w_description .wep_stats,
+    .w_info_container .w_description .wep_dmg {
+      width: 100% !important; }
+
+  .maps {
+    grid-template-columns: repeat(3, 1fr); }
+
+  .bundles {
+    grid-template-columns: repeat(6, 1fr) !important; }
+
+  .map_info .map_images {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    width: 60rem !important; }
+    .map_info .map_images img {
+      width: 100% !important; } }
+@media only screen and (min-width: 1600px) {
+  .modal-open .fade.modal.modal.show .modal-dialog {
+    width: 40% !important; }
+
+  .header {
+    margin: 2% 29% !important; }
+
+  .container .body {
+    margin: 4% 5% !important; }
+    .container .body .agent_lists {
+      grid-template-columns: repeat(4, 1fr) !important; }
+  .container .abilities {
+    grid-template-columns: repeat(4, 1fr) !important; }
+    .container .abilities .description {
+      height: 20rem !important;
+      display: flex !important;
+      flex-direction: column; }
+      .container .abilities .description .video-responsive {
+        margin-top: auto; }
+  .container .agent_header {
+    max-width: 50%;
+    align-self: center; }
+
+  .weapon_lists {
+    grid-template-columns: repeat(6, 1fr) !important;
+    grid-gap: 20px 18px !important; }
+
+  .maps {
+    grid-template-columns: repeat(4, 1fr); }
+
+  .bundles {
+    grid-template-columns: repeat(7, 1fr) !important; } }
+.modal-open div#root {
+  position: absolute;
+  width: -webkit-fill-available; }
+.modal-open .fade.modal.modal.show {
+  background: #000000c5;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: -webkit-fill-available;
+  display: flex !important;
+  align-items: center;
+  justify-content: center; }
+  .modal-open .fade.modal.modal.show .modal-dialog {
+    width: 90%;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2%;
+    font-family: "Roboto"; }
+    .modal-open .fade.modal.modal.show .modal-dialog .modal-content {
+      position: relative; }
+    .modal-open .fade.modal.modal.show .modal-dialog span {
+      float: right; }
+    .modal-open .fade.modal.modal.show .modal-dialog img {
+      width: -webkit-fill-available;
+      border-radius: 5px; }
+
+.container {
+  color: #ccc; }
+  .container svg.return_to {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    z-index: 1000; }
+  .container .header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: #fff;
+    margin: 7% 5%; }
+    .container .header .navbar {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0;
+      width: 100%; }
+    .container .header .logo {
+      width: 5em;
+      height: 5em; }
+    .container .header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin: 4% 0; }
+  .container .body {
+    margin: 7% 5%; }
+    .container .body .agent_lists {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 2rem; }
+    .container .body .agent_card {
+      width: 100%;
+      height: 11em;
+      border-radius: 15px;
+      background: #1f2731;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      cursor: pointer;
+      user-drag: none;
+      -webkit-user-drag: none;
+      user-select: none;
+      transition: 0.5s ease; }
+      .container .body .agent_card:hover {
+        background: #00000057; }
+      .container .body .agent_card .agent_role {
+        position: absolute;
+        color: #2e363f;
+        font-size: 4.2em;
+        letter-spacing: 2.8px;
+        top: 0;
+        left: 0;
+        transform: translate(3%, -8%);
+        font-weight: bold;
+        font-family: secondary; }
+        .container .body .agent_card .agent_role .agent_role_icon {
+          width: 3rem;
+          height: 3rem;
+          opacity: 0.1;
+          margin-right: 0.8rem; }
+      .container .body .agent_card .agent_info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 70%;
+        margin-left: 2rem; }
+        .container .body .agent_card .agent_info .agent_content {
+          z-index: 1; }
+        .container .body .agent_card .agent_info .agent_name {
+          color: #fafbfb;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+          text-transform: uppercase !important; }
+        .container .body .agent_card .agent_info .agent_ability {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          font-size: 14px;
+          color: #d5202f; }
+          .container .body .agent_card .agent_info .agent_ability .abilities {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            font-family: "Roboto";
+            font-size: 13px; }
+          .container .body .agent_card .agent_info .agent_ability .ability_icon {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 5px; }
+      .container .body .agent_card .agent_photo {
+        width: 13rem;
+        height: 13rem;
+        top: -21%;
+        right: -5%;
+        position: absolute; }
+  .container .single_agent_info {
+    background: #fff;
+    display: flex;
+    flex-direction: column; }
+    .container .single_agent_info .single_agent_header {
+      background-image: url("../assets/bg_cover.svg");
+      background-position: center;
+      background-size: cover;
+      height: 40vh;
+      border-radius: 0 0 15% 15%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .container .single_agent_info .single_agent_header .single_agent_background {
+        position: absolute;
+        width: 23rem;
+        height: 23rem;
+        top: -1rem; }
+      .container .single_agent_info .single_agent_header .single_agent_name {
+        padding-top: 2rem;
+        font-size: 3rem;
+        color: #fff; }
+      .container .single_agent_info .single_agent_header .single_agent_img {
+        max-height: 100%;
+        max-width: 100%;
+        z-index: 1000;
+        margin-top: 6rem; }
+    .container .single_agent_info .single_agent_body {
+      color: #9ca2ab;
+      margin: 6rem 2rem 2rem 2rem;
+      font-family: secondary;
+      letter-spacing: 1.2px;
+      display: flex;
+      flex-direction: column; }
+      .container .single_agent_info .single_agent_body .single_agent_role {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #0f1823;
+        padding: 10px 4px; }
+        .container .single_agent_info .single_agent_body .single_agent_role .role_type {
+          display: flex;
+          align-items: center; }
+          .container .single_agent_info .single_agent_body .single_agent_role .role_type img {
+            width: 2.3rem;
+            margin-right: 10px; }
+          .container .single_agent_info .single_agent_body .single_agent_role .role_type .role_name {
+            font-size: 3rem; }
+        .container .single_agent_info .single_agent_body .single_agent_role .description {
+          letter-spacing: normal;
+          font-size: 1.5rem; }
+          .container .single_agent_info .single_agent_body .single_agent_role .description p {
+            text-align: center; }
+      .container .single_agent_info .single_agent_body .agent_description {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 5px; }
+        .container .single_agent_info .single_agent_body .agent_description span {
+          text-align: center;
+          letter-spacing: normal;
+          font-size: 1.1rem;
+          color: #0f1823; }
+      .container .single_agent_info .single_agent_body svg {
+        fill: red;
+        font-size: 12px; }
+      .container .single_agent_info .single_agent_body .ability,
+      .container .single_agent_info .single_agent_body .item {
+        flex-grow: 1;
+        margin-bottom: 2%;
+        padding: 5px;
+        transition: 0.5s all ease;
+        border-radius: 10px;
+        cursor: crosshair;
+        background: #f3f3f3;
+        background: #142942;
+        color: #ccc; }
+        .container .single_agent_info .single_agent_body .ability:hover,
+        .container .single_agent_info .single_agent_body .item:hover {
+          background: #0f1823;
+          border-radius: 10px; }
+        .container .single_agent_info .single_agent_body .ability::selection .description,
+        .container .single_agent_info .single_agent_body .item::selection .description {
+          display: block;
+          transition: 0.5s all ease; }
+        .container .single_agent_info .single_agent_body .ability h3,
+        .container .single_agent_info .single_agent_body .item h3 {
+          font-size: 1.5rem; }
+        .container .single_agent_info .single_agent_body .ability .role_type,
+        .container .single_agent_info .single_agent_body .ability .ability_type,
+        .container .single_agent_info .single_agent_body .item .role_type,
+        .container .single_agent_info .single_agent_body .item .ability_type {
+          display: flex;
+          align-items: center; }
+          .container .single_agent_info .single_agent_body .ability .role_type img,
+          .container .single_agent_info .single_agent_body .ability .ability_type img,
+          .container .single_agent_info .single_agent_body .item .role_type img,
+          .container .single_agent_info .single_agent_body .item .ability_type img {
+            width: 1.4rem;
+            height: 1.4rem;
+            margin-right: 0.5rem; }
+          .container .single_agent_info .single_agent_body .ability .role_type span,
+          .container .single_agent_info .single_agent_body .ability .ability_type span,
+          .container .single_agent_info .single_agent_body .item .role_type span,
+          .container .single_agent_info .single_agent_body .item .ability_type span {
+            font-size: 2rem; }
+        .container .single_agent_info .single_agent_body .ability .description,
+        .container .single_agent_info .single_agent_body .item .description {
+          background: #fff;
+          padding: 1% 3%;
+          border-radius: 5px;
+          display: none;
+          transition: 0.5s all ease;
+          color: #000;
+          letter-spacing: normal;
+          font-size: 1.2rem;
+          display: block; }
+          .container .single_agent_info .single_agent_body .ability .description .video-responsive iframe,
+          .container .single_agent_info .single_agent_body .item .description .video-responsive iframe {
+            border-radius: 10px; }
+  .container .weapon_lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px 5px; }
+    .container .weapon_lists .weapon_lists_container {
+      margin-bottom: 2%;
+      height: 7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 10px;
+      transition: 0.5s all ease;
+      color: #fff;
+      border-top: 2px solid red;
+      position: relative;
+      background: #0000004d; }
+      .container .weapon_lists .weapon_lists_container:hover {
+        height: inherit;
+        background: rgba(255, 0, 0, 0.678); }
+        .container .weapon_lists .weapon_lists_container:hover .weapon_info.overlay {
+          display: block; }
+        .container .weapon_lists .weapon_lists_container:hover .weapon_name {
+          z-index: 1000; }
+        .container .weapon_lists .weapon_lists_container:hover .weapon_name_container {
+          z-index: 1000;
+          background: #fff;
+          color: #000; }
+      .container .weapon_lists .weapon_lists_container .weapon_img_container {
+        position: absolute; }
+      .container .weapon_lists .weapon_lists_container .weapon_name_container {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        background: #ffffff40;
+        width: -webkit-fill-available;
+        text-align: center;
+        font-size: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase; }
+      .container .weapon_lists .weapon_lists_container .weapon_info.overlay {
+        position: absolute;
+        display: none; }
+      .container .weapon_lists .weapon_lists_container .weapon_img {
+        width: 10rem; }
+  .container .w_info_container {
+    font-family: "Roboto", sans-serif;
+    width: inherit;
+    padding-top: 50px; }
+    .container .w_info_container .w_main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%; }
+      .container .w_info_container .w_main h1 {
+        text-transform: uppercase; }
+      .container .w_info_container .w_main .w_btn {
+        display: flex;
+        justify-content: space-evenly;
+        width: 70%;
+        margin: 1rem 0;
+        padding-top: 2%; }
+        .container .w_info_container .w_main .w_btn .btn_active {
+          background: #ffffff17;
+          border-bottom: 3px solid #eaeeb2; }
+        .container .w_info_container .w_main .w_btn span {
+          width: 50%;
+          color: #fff;
+          height: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          font-weight: 400;
+          border-bottom: 1px solid #fff;
+          cursor: pointer; }
+          .container .w_info_container .w_main .w_btn span:hover {
+            background: #ffffff17; }
+    .container .w_info_container .w_info {
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      flex-direction: column;
+      height: 300px;
+      position: relative;
+      margin: 4% 0; }
+      .container .w_info_container .w_info img.buddy {
+        position: absolute;
+        width: 9%;
+        top: 47%;
+        left: 43%;
+        transform: translate(50%, -50%); }
+      .container .w_info_container .w_info .w_skin_img {
+        width: 90%; }
+    .container .w_info_container .w_skins,
+    .container .w_info_container .w_buddies,
+    .container .w_info_container .w_bundles {
+      font-family: inherit;
+      letter-spacing: 2px; }
+      .container .w_info_container .w_skins h2,
+      .container .w_info_container .w_buddies h2,
+      .container .w_info_container .w_bundles h2 {
+        text-align: center;
+        margin: 2%;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 4px;
+        font-size: 1.3rem;
+        height: 40px; }
+      .container .w_info_container .w_skins .w_skin_slider,
+      .container .w_info_container .w_skins .w_buddies_slider,
+      .container .w_info_container .w_skins .w_bundles_slider,
+      .container .w_info_container .w_buddies .w_skin_slider,
+      .container .w_info_container .w_buddies .w_buddies_slider,
+      .container .w_info_container .w_buddies .w_bundles_slider,
+      .container .w_info_container .w_bundles .w_skin_slider,
+      .container .w_info_container .w_bundles .w_buddies_slider,
+      .container .w_info_container .w_bundles .w_bundles_slider {
+        display: flex;
+        scroll-behavior: auto;
+        overflow: auto;
+        scrollbar-color: none;
+        margin-top: 3%; }
+        .container .w_info_container .w_skins .w_skin_slider li,
+        .container .w_info_container .w_skins .w_buddies_slider li,
+        .container .w_info_container .w_skins .w_bundles_slider li,
+        .container .w_info_container .w_buddies .w_skin_slider li,
+        .container .w_info_container .w_buddies .w_buddies_slider li,
+        .container .w_info_container .w_buddies .w_bundles_slider li,
+        .container .w_info_container .w_bundles .w_skin_slider li,
+        .container .w_info_container .w_bundles .w_buddies_slider li,
+        .container .w_info_container .w_bundles .w_bundles_slider li {
+          display: flex;
+          flex-direction: column;
+          width: fit-content; }
+          .container .w_info_container .w_skins .w_skin_slider li .w_skin_name,
+          .container .w_info_container .w_skins .w_buddies_slider li .w_skin_name,
+          .container .w_info_container .w_skins .w_bundles_slider li .w_skin_name,
+          .container .w_info_container .w_buddies .w_skin_slider li .w_skin_name,
+          .container .w_info_container .w_buddies .w_buddies_slider li .w_skin_name,
+          .container .w_info_container .w_buddies .w_bundles_slider li .w_skin_name,
+          .container .w_info_container .w_bundles .w_skin_slider li .w_skin_name,
+          .container .w_info_container .w_bundles .w_buddies_slider li .w_skin_name,
+          .container .w_info_container .w_bundles .w_bundles_slider li .w_skin_name {
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translate(-40%, 30%); }
+          .container .w_info_container .w_skins .w_skin_slider li img,
+          .container .w_info_container .w_skins .w_buddies_slider li img,
+          .container .w_info_container .w_skins .w_bundles_slider li img,
+          .container .w_info_container .w_buddies .w_skin_slider li img,
+          .container .w_info_container .w_buddies .w_buddies_slider li img,
+          .container .w_info_container .w_buddies .w_bundles_slider li img,
+          .container .w_info_container .w_bundles .w_skin_slider li img,
+          .container .w_info_container .w_bundles .w_buddies_slider li img,
+          .container .w_info_container .w_bundles .w_bundles_slider li img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover; }
+          .container .w_info_container .w_skins .w_skin_slider li .melee_skins,
+          .container .w_info_container .w_skins .w_buddies_slider li .melee_skins,
+          .container .w_info_container .w_skins .w_bundles_slider li .melee_skins,
+          .container .w_info_container .w_buddies .w_skin_slider li .melee_skins,
+          .container .w_info_container .w_buddies .w_buddies_slider li .melee_skins,
+          .container .w_info_container .w_buddies .w_bundles_slider li .melee_skins,
+          .container .w_info_container .w_bundles .w_skin_slider li .melee_skins,
+          .container .w_info_container .w_bundles .w_buddies_slider li .melee_skins,
+          .container .w_info_container .w_bundles .w_bundles_slider li .melee_skins {
+            height: 120px;
+            margin: 4%;
+            width: 12rem;
+            object-fit: contain; }
+          .container .w_info_container .w_skins .w_skin_slider li .img_container,
+          .container .w_info_container .w_skins .w_buddies_slider li .img_container,
+          .container .w_info_container .w_skins .w_bundles_slider li .img_container,
+          .container .w_info_container .w_buddies .w_skin_slider li .img_container,
+          .container .w_info_container .w_buddies .w_buddies_slider li .img_container,
+          .container .w_info_container .w_buddies .w_bundles_slider li .img_container,
+          .container .w_info_container .w_bundles .w_skin_slider li .img_container,
+          .container .w_info_container .w_bundles .w_buddies_slider li .img_container,
+          .container .w_info_container .w_bundles .w_bundles_slider li .img_container {
+            background: #303944;
+            border: 1px solid black;
+            transition: background 0.4s ease; }
+            .container .w_info_container .w_skins .w_skin_slider li .img_container:hover,
+            .container .w_info_container .w_skins .w_buddies_slider li .img_container:hover,
+            .container .w_info_container .w_skins .w_bundles_slider li .img_container:hover,
+            .container .w_info_container .w_buddies .w_skin_slider li .img_container:hover,
+            .container .w_info_container .w_buddies .w_buddies_slider li .img_container:hover,
+            .container .w_info_container .w_buddies .w_bundles_slider li .img_container:hover,
+            .container .w_info_container .w_bundles .w_skin_slider li .img_container:hover,
+            .container .w_info_container .w_bundles .w_buddies_slider li .img_container:hover,
+            .container .w_info_container .w_bundles .w_bundles_slider li .img_container:hover {
+              background: red; }
+          .container .w_info_container .w_skins .w_skin_slider li .img_buddies,
+          .container .w_info_container .w_skins .w_buddies_slider li .img_buddies,
+          .container .w_info_container .w_skins .w_bundles_slider li .img_buddies,
+          .container .w_info_container .w_buddies .w_skin_slider li .img_buddies,
+          .container .w_info_container .w_buddies .w_buddies_slider li .img_buddies,
+          .container .w_info_container .w_buddies .w_bundles_slider li .img_buddies,
+          .container .w_info_container .w_bundles .w_skin_slider li .img_buddies,
+          .container .w_info_container .w_bundles .w_buddies_slider li .img_buddies,
+          .container .w_info_container .w_bundles .w_bundles_slider li .img_buddies {
+            width: 100px;
+            height: 100px; }
+            .container .w_info_container .w_skins .w_skin_slider li .img_buddies img,
+            .container .w_info_container .w_skins .w_buddies_slider li .img_buddies img,
+            .container .w_info_container .w_skins .w_bundles_slider li .img_buddies img,
+            .container .w_info_container .w_buddies .w_skin_slider li .img_buddies img,
+            .container .w_info_container .w_buddies .w_buddies_slider li .img_buddies img,
+            .container .w_info_container .w_buddies .w_bundles_slider li .img_buddies img,
+            .container .w_info_container .w_bundles .w_skin_slider li .img_buddies img,
+            .container .w_info_container .w_bundles .w_buddies_slider li .img_buddies img,
+            .container .w_info_container .w_bundles .w_bundles_slider li .img_buddies img {
+              width: 100px;
+              height: 100px; }
+    .container .w_info_container .w_buddies {
+      margin: 2% 0; }
+      .container .w_info_container .w_buddies .buddies_img_container {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        margin: 4%;
+        background: #06060661;
+        padding: 2%;
+        border-radius: 10px; }
+        .container .w_info_container .w_buddies .buddies_img_container .buddies_info {
+          background-image: url("../assets/buddies_view.jpg");
+          background-size: cover;
+          border-radius: 10px;
+          width: -webkit-fill-available;
+          position: relative; }
+          .container .w_info_container .w_buddies .buddies_img_container .buddies_info h5 {
+            text-align: center;
+            color: #ffc600; }
+          .container .w_info_container .w_buddies .buddies_img_container .buddies_info img {
+            position: absolute;
+            width: 4.5rem;
+            top: 40%;
+            left: 26%; }
+    .container .w_info_container .w_description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 5% 0; }
+      .container .w_info_container .w_description .wep_stats,
+      .container .w_info_container .w_description .wep_dmg {
+        width: 90%; }
+      .container .w_info_container .w_description .w_stats,
+      .container .w_info_container .w_description .card {
+        box-shadow: -6px 8px 6px -1px #000000bf;
+        display: grid;
+        background: #202f43;
+        border-radius: 5px;
+        padding: 2%;
+        margin: 5% 0; }
+        .container .w_info_container .w_description .w_stats .w_stats_item,
+        .container .w_info_container .w_description .card .w_stats_item {
+          display: grid;
+          grid-template-columns: 1fr 1fr; }
+          .container .w_info_container .w_description .w_stats .w_stats_item .title,
+          .container .w_info_container .w_description .card .w_stats_item .title {
+            text-align: end; }
+          .container .w_info_container .w_description .w_stats .w_stats_item .value,
+          .container .w_info_container .w_description .card .w_stats_item .value {
+            margin-left: 3%;
+            color: red;
+            transition: 0.5s all ease; }
+      .container .w_info_container .w_description .damage_ranges .value {
+        transition: 0.5s all ease; }
+      .container .w_info_container .w_description .damage_ranges .range_slider {
+        width: 90%;
+        display: flex;
+        justify-self: center; }
+      .container .w_info_container .w_description .damage_ranges .damage_meter {
+        display: flex;
+        justify-self: center; }
+  .container .maps .map_item {
+    padding: 2%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+    .container .maps .map_item .map_img {
+      width: -webkit-fill-available;
+      opacity: 0.7;
+      border-radius: 15px; }
+    .container .maps .map_item .title_container {
+      position: absolute;
+      bottom: 11%;
+      background: #0f1823b3;
+      border-radius: 0 25px 5px 0;
+      width: 60%;
+      left: -6%;
+      transition: 0.5s all ease; }
+      .container .maps .map_item .title_container .map_images {
+        display: flex;
+        flex-direction: column;
+        width: -webkit-fill-available; }
+      .container .maps .map_item .title_container .map_title {
+        color: red;
+        padding: 2px;
+        font-size: 1.5rem;
+        text-align: center; }
+    .container .maps .map_item:hover .map_img {
+      opacity: 1; }
+    .container .maps .map_item:hover .title_container {
+      background-color: #0f1823; }
+    .container .maps .map_item:hover .map_title {
+      color: #fff; }
+  .container .map_info {
+    margin-bottom: 2%;
+    width: 100%; }
+    .container .map_info .map_header {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10rem; }
+      .container .map_info .map_header .map_header_img {
+        width: 100%;
+        opacity: 0.8;
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+        mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)); }
+      .container .map_info .map_header .map_header_title {
+        position: absolute;
+        color: #fff; }
+    .container .map_info .map_detail {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin: 2% 0; }
+      .container .map_info .map_detail .map_container {
+        position: relative;
+        height: 35rem;
+        color: #fff;
+        font-family: "Roboto";
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .container .map_info .map_detail .map_container span {
+          letter-spacing: 0.5px;
+          text-align: center;
+          line-height: 1.3;
+          margin: 2%;
+          max-width: 50rem; }
+        .container .map_info .map_detail .map_container .map_images {
+          display: flex;
+          flex-direction: column;
+          width: -webkit-fill-available; }
+        .container .map_info .map_detail .map_container .map_img {
+          width: inherit;
+          border: 2px solid #fff;
+          border-radius: 5px;
+          align-self: center;
+          margin: 2% 0; }
+      .container .map_info .map_detail .map_layout {
+        width: 90%; }
+  .container .bundles {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px; }
+    .container .bundles .bundle_card {
+      text-align: center;
+      padding: 5%;
+      border-radius: 10px; }
+      .container .bundles .bundle_card .bundle_img {
+        margin-top: 5px;
+        width: 100%;
+        border-radius: 10px;
+        transition: 0.5s all ease; }
+      .container .bundles .bundle_card:hover .bundle_img {
+        box-shadow: 1px 1px 7px 4px rgba(177, 11, 24, 0.7); }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+@font-face {
+	font-family: valorant;
+	src: url(../assets/Valorant\ Font.ttf);
+}
+
+@font-face {
+	font-family: secondary;
+	src: url(../assets/Tungsten-Bold.ttf);
+}
+
+@import "variables";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: valorant;
+	height: 100vh;
+	background-color: $main_bg;
+}
+
+.body {
+	padding-bottom: 5%;
+}
+
+a {
+	text-decoration: none;
+	border: none;
+	color: $secondary;
+	font-size: 1rem;
+	font-weight: bold;
+
+	&:hover {
+		color: $active;
+	}
+}
+
+li {
+	list-style-type: none;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	font-family: secondary;
+	letter-spacing: 1px;
+}
+
+.active {
+	height: 1.5rem;
+	padding-bottom: 2px;
+	position: relative;
+	color: $active;
+
+	&::after {
+		content: "";
+		height: 0.16rem;
+		background-color: #d5202f;
+		position: absolute;
+		border-radius: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin-top: 15%;
+	}
+}
+
+html::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 25px;
+	background-color: $main_bg;
+}
+
+html::-webkit-scrollbar {
+	width: 12px;
+	background-color: $main_bg;
+}
+
+html::-webkit-scrollbar-thumb {
+	border-radius: 25px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: $active;
+}
